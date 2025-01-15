@@ -13,6 +13,8 @@
 - [Usage](#usage)
 - [License](#license)
 - [Contact](#contact)
+- [Screenshots](#screenshots)
+- [Key Features](#key-features)
 
 ## Introduction
 
@@ -100,6 +102,8 @@ _Thank you for using CodyAI Resume Builder! We hope it helps you create the perf
 
 ---
 
+## Screenshots
+
 ![Application Screenshot 2](/public/img/Screenshot_2.png)
 _Figure 2_
 
@@ -128,7 +132,9 @@ Below are two lists you can include in your project’s README to highlight key 
 
 ---
 
-## Key Features from `app/api/githubAPI/commits/route.js`
+## Key Features
+
+from `app/api/githubAPI/commits/route.js`
 
 1. **Secure Token Management**
 
@@ -160,7 +166,9 @@ Below are two lists you can include in your project’s README to highlight key 
 
 ---
 
-## Key Features from `app/(protectedRoutes)/codyAI/resumeTools/components/prompt.js`
+## Key Features
+
+from `app/(protectedRoutes)/codyAI/resumeTools/components/prompt.js`
 
 1. **Dynamic Prompt Creation**
 
