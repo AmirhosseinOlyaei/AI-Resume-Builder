@@ -123,3 +123,65 @@ _Figure 8_
 
 ![Application Screenshot 9](/public/img/Screenshot_9.png)
 _Figure 9_
+
+Below are two lists you can include in your project’s README to highlight key features from each file:
+
+---
+
+## Key Features from `app/api/githubAPI/commits/route.js`
+
+1. **Secure Token Management**
+
+   - Uses encrypted, per-repository GitHub tokens (`GitHubToken` model) that are decrypted only when needed.
+
+2. **Comprehensive Data Retrieval**
+
+   - Fetches both commits and pull requests to consolidate the developer’s full activity across multiple repositories.
+   - Utilizes pagination and concurrency to handle large datasets efficiently.
+
+3. **Intelligent Commit Filtering**
+
+   - Excludes trivial or duplicate commit messages, focusing on meaningful contributions.
+   - Calculates total commits and contribution duration for clear metrics.
+
+4. **Pull Request Detail Extraction**
+
+   - Retrieves PR metadata (title, body, dates, etc.) for deeper insights.
+   - Enforces concurrency limits to prevent overloading the GitHub API.
+
+5. **Robust Error Handling & Rate Limit Management**
+
+   - Manages invalid URLs, missing parameters, and restricted repository access gracefully.
+   - Implements rate-limit checks to delay requests until API resets, preventing interruptions.
+
+6. **MongoDB Integration**
+   - Stores project and repository configurations in the `Project` model, allowing dynamic retrieval of multiple repos.
+   - Streamlines adding or modifying tracked repositories without altering core logic.
+
+---
+
+## Key Features from `app/(protectedRoutes)/codyAI/resumeTools/components/prompt.js`
+
+1. **Dynamic Prompt Creation**
+
+   - Adapts to available data (commits, pull requests, or none) to generate tailored AI prompts.
+   - Provides fallback logic for scenarios with limited or no developer contribution data.
+
+2. **Resume-Focused Formatting**
+
+   - Clearly instructs AI to generate concise, high-impact résumé bullets.
+   - Emphasizes strong action verbs, quantifiable achievements, and relevant technologies.
+
+3. **Customization & Error Handling**
+
+   - Accepts optional error messages to handle incomplete data gracefully.
+   - Offers flexibility to tailor final output based on user feedback or project needs.
+
+4. **User Feedback Integration**
+
+   - The `changePrompt` function allows targeted revisions without altering unrelated content, streamlining collaborative edits.
+   - Makes iterative refinement simpler by focusing on specific user-requested changes.
+
+5. **Concise & Impactful Guidance**
+   - Encourages an opening statement and up to five bullet points for clarity and brevity.
+   - Aligns with industry expectations for top-tier résumé writing, spotlighting results and skills.
